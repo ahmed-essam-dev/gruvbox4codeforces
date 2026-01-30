@@ -1,0 +1,1124 @@
+/* ==UserStyle==
+@name         Gruvbox for Codeforces
+@namespace    https://codeforces.com/*
+@homepageURL  https://github.com/ahmed-essam-dev/gruvbox4codeforces/
+@updateURL    https://raw.githubusercontent.com/ahmed-essam-dev/gruvbox4codeforces/refs/heads/main/stylus.user.css
+@version      0.0.1
+@description  Gruvbox theme for Codeforces with light/dark and soft/hard variants
+@author       ahmed-essam-dev
+@license      MIT
+
+@preprocessor stylus
+@var select theme "Theme Variant" [
+    "darkHard:Dark (Hard)*",
+    "darkSoft:Dark (Soft)", 
+    "lightHard:Light (Hard)",
+    "lightSoft:Light (Soft)",
+]
+==/UserStyle== */
+
+@-moz-document domain("codeforces.com") {
+    
+    /* =================================
+       Apply selected theme palette
+       =================================
+    */
+
+    /* Dark Hard palette (default Gruvbox) */
+    if theme == "darkHard" {
+        :root {
+            /* Background colors - dark to light */
+            --bg: #1d2021;     /* Main background */
+            --bg0_h: #1d2021;  /* Darkest background */
+            --bg0: #282828;    /* Base background */
+            --bg1: #3c3836;    /* Slightly lighter background */
+            --bg2: #504945;    /* Even lighter background */
+            --bg3: #665c54;    /* Highlight background */
+            --bg4: #7c6f64;    /* Lightest background */
+
+            /* Foreground colors - light to dark */
+            --fg: #fbf1c7;     /* Main foreground */
+            --fg0: #fbf1c7;    /* Brightest text */
+            --fg1: #ebdbb2;    /* Primary text */
+            --fg2: #d5c4a1;    /* Secondary text */
+            --fg3: #bdae93;    /* Tertiary text */
+            --fg4: #a89984;    /* Quaternary text */
+
+            /* Accent colors */
+            --red: #cc241d;    /* Error, rejection */
+            --green: #98971a;  /* Success, acceptance */
+            --yellow: #d79921; /* Warning, highlight */
+            --blue: #458588;   /* Links, information */
+            --purple: #b16286; /* Special elements */
+            --aqua: #689d6a;   /* Alternate links */
+            --orange: #d65d0e; /* Important notices */
+            --gray: #928374;   /* Disabled elements */
+
+            /* used with images to invert its colors */
+            --invert-value: 0.84
+            --hue-rotate-value: 0deg
+
+        }
+    }
+    
+    /* Dark Soft palette */
+    if theme == "darkSoft" {
+        :root {
+            /* Background colors - dark to light */
+            --bg: #32302f;     /* Main background */
+            --bg0_h: #32302f;  /* Darkest background */
+            --bg0: #3c3836;    /* Base background */
+            --bg1: #504945;    /* Slightly lighter background */
+            --bg2: #665c54;    /* Even lighter background */
+            --bg3: #7c6f64;    /* Highlight background */
+            --bg4: #928374;    /* Lightest background */
+
+            /* Foreground colors - light to dark */
+            --fg: #fbf1c7;     /* Main foreground */
+            --fg0: #fbf1c7;    /* Brightest text */
+            --fg1: #ebdbb2;    /* Primary text */
+            --fg2: #d5c4a1;    /* Secondary text */
+            --fg3: #bdae93;    /* Tertiary text */
+            --fg4: #a89984;    /* Quaternary text */
+
+            /* Accent colors */
+            --red: #cc241d;
+            --green: #98971a;
+            --yellow: #d79921;
+            --blue: #458588;
+            --purple: #b16286;
+            --aqua: #689d6a;
+            --orange: #d65d0e;
+            --gray: #928374;
+
+            --invert-value: 0.84
+            --hue-rotate-value: 180deg
+
+
+        }
+    }
+    
+    /* Light Hard palette */
+    if theme == "lightHard" {
+        :root {
+            /* Background colors - light to dark */
+            --bg: #fbf1c7;     /* Main background */
+            --bg0_h: #f9f5d7;  /* Lightest background */
+            --bg0: #fbf1c7;    /* Base background */
+            --bg1: #ebdbb2;    /* Slightly darker background */
+            --bg2: #d5c4a1;    /* Even darker background */
+            --bg3: #bdae93;    /* Highlight background */
+            --bg4: #a89984;    /* Darkest background */
+
+            /* Foreground colors - dark to light */
+            --fg: #3c3836;     /* Main foreground */
+            --fg0: #282828;    /* Darkest text */
+            --fg1: #3c3836;    /* Primary text */
+            --fg2: #504945;    /* Secondary text */
+            --fg3: #665c54;    /* Tertiary text */
+            --fg4: #7c6f64;    /* Quaternary text */
+
+            /* Accent colors */
+            --red: #cc241d;
+            --green: #98971a;
+            --yellow: #d79921;
+            --blue: #458588;
+            --purple: #b16286;
+            --aqua: #689d6a;
+            --orange: #d65d0e;
+            --gray: #928374;
+
+            --invert-value: 0.1
+            --hue-rotate-value: 0deg
+
+
+        }
+    }
+    
+    /* Light Soft palette */
+    if theme == "lightSoft" {
+        :root {
+            /* Background colors - light to dark */
+            --bg: #f2e5bc;     /* Main background */
+            --bg0_h: #f2e5bc;  /* Lightest background */
+            --bg0: #f2e5bc;    /* Base background */
+            --bg1: #ebdbb2;    /* Slightly darker background */
+            --bg2: #d5c4a1;    /* Even darker background */
+            --bg3: #bdae93;    /* Highlight background */
+            --bg4: #a89984;    /* Darkest background */
+
+            /* Foreground colors - dark to light */
+            --fg: #3c3836;     /* Main foreground */
+            --fg0: #282828;    /* Darkest text */
+            --fg1: #3c3836;    /* Primary text */
+            --fg2: #504945;    /* Secondary text */
+            --fg3: #665c54;    /* Tertiary text */
+            --fg4: #7c6f64;    /* Quaternary text */
+
+            /* Accent colors */
+            --red: #cc241d;
+            --green: #98971a;
+            --yellow: #d79921;
+            --blue: #458588;
+            --purple: #b16286;
+            --aqua: #689d6a;
+            --orange: #d65d0e;
+            --gray: #928374;
+
+            --invert-value: 0.1
+            --hue-rotate-value: 0deg
+        }
+    }
+    
+    /* ================================
+       2. BASE & GLOBAL STYLES
+       ================================
+    */
+
+    /* Main page background */
+    html, body {
+        background: none !important;
+        background-color: var(--bg0_h) !important;
+    }
+    
+    /* Override any dark reader color modifications */
+    [style*="color:"] {
+        color: inherit !important;
+    }
+    
+    /* Text selection highlight */
+    ::selection {
+        background-color: var(--yellow) !important;
+        color: var(--bg0) !important;
+    }
+    
+    /* Placeholder text in input fields */
+    ::placeholder {
+        color: var(--fg4) !important;
+        opacity: 0.7 !important;
+    }
+    
+    /* Custom scrollbar styling */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--bg1);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--bg3);
+        border-radius: 6px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--bg4);
+    }
+
+    /* =======================================================
+       3. USER RATING COLORS (KEEP ORIGINAL CODEFORCES COLORS)
+       =======================================================
+    */
+
+    /* Preserve original Codeforces rating colors for consistency */
+    .user-black { color: #000000 !important; }
+    .user-gray, .user-newbie { color: #808080 !important; }
+    .user-green, .user-pupil { color: #008000 !important; }
+    .user-cyan, .user-specialist { color: #03a89e !important; }
+    .user-blue, .user-expert { color: #0000ff !important; }
+    .user-violet, .user-candidate-master { color: #aa00aa !important; }
+    .user-orange, .user-master { color: #ff8c00 !important; }
+    .user-red, .user-international-master, 
+    .user-grandmaster, .user-international-grandmaster { 
+        color: #ff0000 !important; 
+    }
+    .user-legendary, .legendary-user-first-letter {
+        color: #ff0000 !important;
+        text-shadow: 0 0 5px rgba(255, 0, 0, 0.3) !important;
+    }
+    .user-admin { color: #000000 !important; }
+
+    /* ======================================
+       4. LAYOUT COMPONENTS
+       ======================================
+    */
+
+    /* Header section */
+    
+    /* Codeforces logo and notification bell - invert to match dark theme */
+    #header img[title="Codeforces"],
+    #header .header-bell__img {
+        filter: invert(var(--invert-value));
+    }
+    
+    /* Logo hover effect */
+    #header img[title="Codeforces"]:hover {
+        transform: scale(1.02) !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    /* Footer section */
+    #footer {
+        border-top: 1px solid var(--bg2) !important;
+        color: var(--fg3) !important;
+        opacity: 0.1;
+        transition: 0.9s opacity;
+    }
+    
+    #footer:hover {
+        opacity: 1;
+    }
+    
+    /* Sidebar containers */
+    #sidebar .roundbox {
+        background-color: var(--bg0) !important;
+        border-color: var(--bg2) !important;
+    }
+    
+    /* General roundbox containers */
+    .roundbox {
+        background-color: var(--bg0) !important;
+        border-color: var(--bg2) !important;
+    }
+    
+    /* Menu-specific roundbox */
+    .roundbox.menu-box {
+        background-color: var(--bg0) !important;
+        border-color: var(--bg2) !important;
+    }
+    
+    /* Meta roundbox (additional info boxes) */
+    .roundbox.meta {
+        background-color: var(--bg1) !important;
+        border-color: var(--bg2) !important;
+    }
+
+    /* ====================================
+       5. TYPOGRAPHY & TEXT ELEMENTS
+       ====================================
+    */
+
+    /* General body text */
+    body:not(.rated-user),
+    .topic .content:not(.rated-user),
+    .ttypography:not(.rated-user) {
+        color: var(--fg1) !important;
+    }
+    
+    /* Collapsible content fade effect */
+
+    .collapsible-topic.collapsed .content .collapsible-topic-options::before 
+    {
+        background-image: linear-gradient(#fff0, var(--bg0)) !important;
+    }
+    
+    /* Standard links */
+    a:not(.rated-user) {
+        color: var(--blue) !important;
+    }
+    
+    /* Link hover state */
+    a:hover:not(.rated-user) {
+        color: var(--aqua) !important;
+    }
+    
+    /* Topic title links */
+    .topic .title a:not(.rated-user) {
+        color: var(--yellow) !important;
+    }
+    
+    /* Information text (metadata, descriptions) */
+    .info {
+        color: var(--fg3) !important;
+    }
+    
+    /* Section captions with titles */
+    .caption.titled {
+        color: var(--yellow) !important;
+        border-bottom-color: var(--bg2) !important;
+    }
+    
+    /* Topic rating (positive ratings) */
+    .topic-rating {
+        color: var(--green) !important;
+    }
+    
+    /* Topic rating (negative ratings) */
+    .topic-rating[data-rawrating^="-"] {
+        color: var(--fg3) !important;
+    }
+    
+    /* Countdown timer */
+    .countdown {
+        color: var(--yellow) !important;
+    }
+    
+    /* Contest state/phase indicator */
+    .contest-state-phase {
+        color: var(--green) !important;
+    }
+    
+    /* MathJax equations */
+    .MathJax, .MathJax * {
+        color: var(--fg1) !important;
+    }
+    
+    /* Headings in typography sections */
+    div.ttypography h1,
+    div.ttypography h2,
+    div.ttypography h3,
+    div.ttypography h4,
+    div.ttypography h5,
+    div.ttypography h6 
+    {
+        color: var(--purple) !important;
+    }
+
+    /* ===================================
+       6. TABLES & DATA DISPLAY
+       ===================================
+    */
+
+    /* Table containers */
+    .rtable,
+    .problems,
+    .datatable {
+        background-color: var(--bg0) !important;
+    }
+    
+    /* Standard table cells */
+    .datatable td,
+    .rtable td,
+    .problems td {
+        background-color: var(--bg2) !important;
+    }
+    
+    /* Dark/alternating row styling */
+    .ttypography table.bordertable tr.dark td,
+    .datatable tr.dark td,
+    .rtable tr.dark td,
+    .problems tr.dark td,
+    .rtable tr.dark,
+    .rtable td.dark,
+    .rtable td.left.dark,
+    .problems td.dark,
+    .problems td.left.dark,
+    .datatable td.dark,
+    .datatable td.left.dark 
+    {
+        background-color: var(--bg1) !important;
+    }
+    
+    /* Table headers */
+    .ttypography table.bordertable th,
+    .datatable th {
+        background-color: var(--bg2) !important;
+        color: var(--yellow) !important;
+    }
+    
+    /* Table borders */
+    .ttypography table.bordertable {
+        border-color: var(--bg2) !important;
+    }
+    
+    /* Table cell borders and text */
+    .ttypography table.bordertable th,
+    .ttypography table.bordertable td {
+        border-color: var(--bg2) !important;
+        color: var(--fg) !important;
+    }
+    
+    /* Row hover effects */
+    .ttypography table.bordertable tr:hover td,
+    .datatable tr:hover td,
+    .rtable tr:hover td,
+    .table-form tr:hover td,
+    .datatable tr:hover td.left.dark,
+    .rtable tr:hover td.left.dark,
+    .problems tr:hover td.left.dark,
+    .table-form tr:hover td.left.dark {
+        background-color: var(--bg0) !important;
+        transition: background-color 0.1s ease;
+    }
+    
+    /* Accepted problem styling */
+    .problems .accepted-problem td.act {
+        background-color: var(--green) !important;
+    }
+    
+    .problems .accepted-problem td.id {
+        border-left-width: 6px !important;
+        border-left-style: solid !important;
+        border-left-color: var(--green) !important;
+    }
+    
+    /* Rejected problem styling */
+    .problems .rejected-problem td.act {
+        background-color: var(--red) !important;
+    }
+    
+    .problems .rejected-problem td.id {
+        border-left-width: 6px !important;
+        border-left-style: solid !important;
+        border-left-color: var(--red) !important;
+    }
+
+    /* ==================================
+       7. CONTENT BLOCKS
+       ==================================
+    */
+
+    /* Topic/post container boxes */
+    .topic {
+        background-color: var(--bg0) !important;
+        border: 1px solid var(--bg2) !important;
+        border-radius: 6px;
+        margin-bottom: 1.5em;
+    }
+    
+    /* Code blocks and inline code */
+    .ttypography pre, 
+    .ttypography code {
+        background-color: var(--bg1) !important;
+        border-color: var(--bg2) !important;
+        color: var(--fg2) !important;
+    }
+
+    /* =========================================
+       8. FORM ELEMENTS & INTERACTIVE COMPONENTS
+       =========================================
+    */
+
+    /* Input fields, textareas, selects */
+    input, textarea, select, .SumoSelect > p {
+        background-color: var(--bg1) !important;
+        border-color: var(--bg2) !important;
+        color: var(--fg1) !important;
+    }
+    
+    /* Dropdown menu options */
+    .SumoSelect > .optWrapper > .options li.opt {
+        background-color: var(--bg1) !important;
+    }
+    
+    /* Dropdown option hover */
+    .SumoSelect > .optWrapper > .options li.opt:hover {
+        background-color: var(--bg3) !important;
+    }
+    
+    /* Search input field */
+    input.search {
+        background-color: var(--bg1) !important;
+        border-color: var(--bg2) !important;
+        color: var(--fg1) !important;
+    }
+    
+    /* Buttons */
+    input[type="submit"], 
+    input[type="button"], 
+    button {
+        background-color: var(--bg2) !important;
+        border-color: var(--bg3) !important;
+        color: var(--fg1) !important;
+    }
+    
+    /* Button hover state */
+    input[type="submit"]:hover, 
+    input[type="button"]:hover, 
+    button:hover {
+        background-color: var(--bg3) !important;
+    }
+
+    /* ========================================
+       9. UI ELEMENTS & DECORATIONS
+       ========================================
+    */
+
+    /* Tags */
+    .tag {
+        background-color: var(--bg2) !important;
+        color: var(--fg2) !important;
+        border-color: var(--bg3) !important;
+    }
+    
+    /* Tag hover */
+    .tag:hover {
+        background-color: var(--bg3) !important;
+    }
+    
+    /* Tooltips and popups */
+    .tooltip, .popup {
+        background-color: var(--bg0) !important;
+        border-color: var(--bg2) !important;
+        color: var(--fg1) !important;
+    }
+    
+    /* Catalog blog entry names */
+    ._catalogBlogEntry > ._name,
+    ._catalogBlogEntry ._name i[class^="icon-"] {
+        color: var(--purple) !important;
+    }
+    
+    /* Bottom navigation links */
+    .bottom-links {
+        background-color: var(--bg0_s) !important;
+        border: 1px solid var(--bg3) !important;
+        color: var(--fg) !important;
+        padding: 5px !important;
+        border-radius: 4px;
+    }
+    
+    /* Pagination active page */
+    .pagination .page-index.active,
+    .pagination .page-index.active a,
+    .pagination .page-index.active span {
+        background-color: var(--bg1) !important;
+        color: var(--aqua) !important;
+        border-color: var(--bg1);
+        border-radius: 3px;
+        padding: 2px 1px;
+    }
+    
+    /* Upvote button hover */
+    .button-up:hover {
+        background-color: var(--bg1) !important;
+    }
+    
+    /* Sidebar menu items */
+    .sidebar-menu ul li {
+        border: none;
+    }
+    
+    /* Sidebar menu active */
+    .sidebar-menu ul li.active {
+        background-color: var(--fg) !important;
+    }
+    
+    /* Sidebar menu hover */
+    .sidebar-menu ul li:hover {
+        background-color: var(--bg2) !important;
+    }
+    
+    /* Sidebar icons */
+    .sidebar-menu img {
+        filter: invert(var(--invert-value));
+    }
+
+    /* =======================================
+       10. SPECIAL CASES
+       =======================================
+    */
+    
+    /* Lava elements - roundbox corners (disable original graphics) */
+    .ilt, .irt, .lt, .rt, .lb, .rb,
+    .current.selectedLava,
+    .leftLava,
+    .bottomLava,
+    .cornerLava {
+        background: none !important;
+    }
+    
+    .backLava,
+    {
+        background: none !important;
+        background-color: var(--bg1) !important;
+        color: var(--aqua) !important;
+        border-color: var(--bg1);
+        border-radius: 3px;
+        padding: 2px 1px;
+    }
+   
+    /* Rating bar (difficulty selector) - invert stars for dark theme */
+    #vote-list-filterDifficultyLowerBorder,
+    #vote-list-filterDifficultyUpperBorder {
+        filter: invert(var(--invert-value)) hue-rotate(var(--hue-rotate-value)) !important;
+        border-radius: 4px;
+    }
+    
+    /* ================================================================
+       11. USER ACTIVITY GRAPH (HEATMAP CALENDAR) - AGGRESSIVE OVERRIDE
+       ================================================================
+    */
+
+    #userActivityGraph svg rect[fill="#EBEDF0"] {
+        fill: var(--bg1) !important;
+        stroke: var(--bg0) !important;
+    }
+
+    #userActivityGraph svg rect[fill="#91DA9E"] {
+        fill: #98971a44 !important;
+        stroke: var(--bg0) !important;
+    }
+
+    #userActivityGraph svg rect[fill="#40C463"] {
+        fill: #98971a77 !important;
+        stroke: var(--bg0) !important;
+    }
+
+    #userActivityGraph svg rect[fill="#30A14E"] {
+        fill: #98971abb !important;
+        stroke: var(--bg0) !important;
+    }
+
+    #userActivityGraph svg rect[fill="#216E39"] {
+        fill: var(--green) !important;
+        stroke: var(--bg0) !important;
+    }
+    
+     /* ==================================
+        12.LAYOUT & CONTAINER POSITIONING
+        ==================================
+    */
+
+    /* Main content container - centers everything */
+    #body {
+        max-width: 95vw !important;
+        min-width: initial !important;
+        width: 1200px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+
+    /* Sidebar with slide-out effect */
+    #sidebar {
+        position: fixed !important;
+        margin: 0 !important;
+        z-index: 99 !important;
+        left: 100vw !important;           /* Start completely off-screen to the right */
+        top: 5% !important;
+        width: 300px !important;
+        height: calc(100vh - 50px) !important;
+        overflow-y: auto !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;;
+
+    }
+
+    /* Show sidebar when hovering near right edge of screen */
+
+    #sidebar:hover {
+        left: calc(100vw - 300px) !important; /* Slide into view from right */
+    }
+
+    #sidebar::before {
+        position: fixed;
+        right: 0.5% !important;           /* Fixed 20px from left edge */
+        top: 5% !important;
+        transform: translateY(-50%) !important;
+        background-color: var(--bg2) !important;
+        color: var(--fg2) !important;
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 50% !important;
+        cursor: pointer !important;
+        font-size: 16px !important;
+        opacity: 0.6 !important;
+        transition: all 0.2s ease !important;
+        z-index: 99 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 2px solid var(--bg3) !important;
+    }
+
+    /* Show arrow icon before text */
+    #sidebar::before {
+        content: "▶";  /* Arrow pointing right */
+    }
+
+    /* Change arrow when sidebar is visible */
+    #sidebar:hover::before {
+        content: "◀";  /* Arrow pointing left when sidebar is visible */
+        opacity: 1 !important;
+        background-color: var(--bg3) !important;
+    }
+
+    /* Hover effect for the indicator */
+    #sidebar::before:hover {
+        opacity: 1 !important;
+        background-color: var(--bg3) !important;
+        transform: translateY(-50%) scale(1.05) !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    /* Adjust content area */
+    .content-with-sidebar {
+        margin-right: 0 !important; /* Remove right margin since sidebar is fixed */
+    }
+
+    /* Main content padding */
+    #pageContent {
+        padding-top: 50px !important;
+    }
+    
+    /* ===================
+       13. MISCELLANEOUS
+       ===================
+    */
+    
+    .problem-statement {
+      font-size: 2rem !important;
+    }
+    
+    /* images in the problem-statement */
+    .tex-graphics {
+        background: var(--fg1) !important;
+    }
+    
+    /* Test case examples - alternating rows */
+    .test-example-line-even {
+        background-color: var(--bg0) !important;
+    }
+    
+    .test-example-line-odd {
+        background-color: var(--bg1) !important;
+    }
+    
+    /* Test case hover */
+    .test-example-line:hover {
+        background-color: var(--bg3) !important;
+    }
+    
+    /* Accepted solutions list - alternating rows */
+    .ac_even {
+        background-color: var(--bg0) !important;
+    }
+    
+    .ac_odd {
+        background-color: var(--bg1) !important;
+    }
+    
+    /* Accepted solutions hover */
+    .ac_over {
+        background-color: var(--bg2) !important;
+    }
+    
+    /* Specific styled spans */
+    span[style="color:gray;font-weight:bold;"] {
+        color: var(--fg3) !important;
+    }
+    
+    span[style="color:green;font-weight:bold;"] {
+        color: var(--green) !important;
+    }
+    
+    img[src $= "user.png"]
+    img[src $= "add_group.png"]
+    {
+        filter: invert(var(--invert-value));
+    }
+
+    /* ====================================
+       12. CODE EDITOR (ACE EDITOR) STYLING
+       ======================================
+    */
+
+    /* Editor container */
+    #editor.ace_editor {
+        background-color: var(--bg0) !important;
+        border-color: var(--bg2) !important;
+        color: var(--fg1) !important;
+    }
+
+    /* Ace editor content area */
+    .ace_editor .ace_content {
+        background-color: var(--bg0) !important;
+    }
+
+    /* Editor text */
+    .ace_editor .ace_text-input,
+    .ace_editor .ace_line {
+        color: var(--fg1) !important;
+        background-color: transparent !important;
+    }
+
+    /* Editor gutter (line numbers) */
+    .ace_editor .ace_gutter {
+        background-color: var(--bg1) !important;
+        border-right: 1px solid var(--bg2) !important;
+        color: var(--fg3) !important;
+    }
+
+    /* Active line highlighting */
+    .ace_editor .ace_active-line {
+        background-color: var(--bg2) !important;
+    }
+
+    /* Active line gutter styling */
+    .ace_editor .ace_gutter-active-line {
+        background-color: var(--bg3) !important;
+        color: var(--yellow) !important;
+    }
+
+    /* Cursor color */
+    .ace_editor .ace_cursor {
+        color: var(--yellow) !important;
+        border-color: var(--yellow) !important;
+    }
+
+    /* Selection highlighting */
+    .ace_editor .ace_selection {
+        background-color: var(--bg3) !important;
+    }
+
+    /* Scrollbars in editor */
+    .ace_editor .ace_scrollbar {
+        background-color: var(--bg1) !important;
+    }
+
+    .ace_editor .ace_scrollbar-thumb {
+        background-color: var(--bg3) !important;
+    }
+
+    /* Syntax highlighting (generic - will style most common tokens) */
+    .ace_editor .ace_keyword {
+        color: var(--purple) !important;
+    }
+
+    .ace_editor .ace_string {
+        color: var(--green) !important;
+    }
+
+    .ace_editor .ace_constant {
+        color: var(--orange) !important;
+    }
+
+    .ace_editor .ace_comment {
+        color: var(--fg4) !important;
+        font-style: italic !important;
+    }
+
+    .ace_editor .ace_variable {
+        color: var(--fg1) !important;
+    }
+
+    .ace_editor .ace_function {
+        color: var(--blue) !important;
+    }
+
+    .ace_editor .ace_type {
+        color: var(--aqua) !important;
+    }
+
+    .ace_editor .ace_numeric {
+        color: var(--orange) !important;
+    }
+
+    /* checkbox - UNCHECKED STATE */
+    input[type="checkbox"] {
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+        width: 16px !important;
+        height: 16px !important;
+        background-color: var(--bg1) !important;
+        border: 2px solid var(--bg3) !important;
+        border-radius: 3px !important;
+        cursor: pointer !important;
+        justify-content: center !important;
+        position: relative !important;
+    }
+
+    /* checkbox - CHECKED STATE */
+    input[type="checkbox"]:checked {
+        background-color: var(--green) !important;
+        border-color: var(--green) !important;
+    }
+
+    /* Checkbox checkmark when checked */
+    input[type="checkbox"]:checked::before {
+        content: "✓" !important;
+        position: absolute !important;
+        color: var(--fg) !important;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* Checkbox hover state */
+    input[type="checkbox"]:hover {
+        border-color: var(--yellow) !important;
+    }
+
+    /* Checkbox label */
+    .toggleEditorCheckboxLabel {
+        color: var(--fg2) !important;
+        cursor: pointer !important;
+        vertical-align: middle !important;
+    }
+
+    .toggleEditorCheckboxLabel:hover {
+        color: var(--fg1) !important;
+    }
+
+    /* Tab size input styling */
+    .tabSizeDiv label {
+        color: var(--fg2) !important;
+        font-size: 0.9em !important;
+    }
+
+    #tabSizeInput {
+        background-color: var(--bg1) !important;
+        border: 1px solid var(--bg2) !important;
+        color: var(--fg1) !important;
+        border-radius: 3px !important;
+        padding: 2px 4px !important;
+        font-size: 0.9em !important;
+    }
+
+    /* Tab size input focus state */
+    #tabSizeInput:focus {
+        outline: 2px solid var(--blue) !important;
+        outline-offset: 1px !important;
+    }
+
+    /* WebKit styling for Chrome/Safari/Edge */
+    #tabSizeInput::-webkit-inner-spin-button,
+    #tabSizeInput::-webkit-outer-spin-button {
+        background-color: var(--bg2) !important;
+        color: var(--fg1) !important;
+        border-left: 1px solid var(--bg3) !important;
+        height: 20px !important;
+        cursor: pointer !important;
+        opacity: 1 !important;
+    }
+
+    /* Hidden textarea fallback */
+    #sourceCodeTextarea {
+        background-color: var(--bg1) !important;
+        color: var(--fg1) !important;
+        border-color: var(--bg2) !important;
+    }
+
+    /* Editor container cell */
+    .aceEditorTd {
+        padding: 0.7em !important;
+        background-color: var(--bg0) !important;
+    }
+
+    /* Optional: If you want to style the status bar (if visible) */
+    .ace_editor .ace_status-indicator {
+        color: var(--fg3) !important;
+        background-color: var(--bg1) !important;
+    }
+
+    /* Optional: Styling for fold widgets in gutter */
+    .ace_editor .ace_fold-widget {
+        background-color: transparent !important;
+        color: var(--fg3) !important;
+    }
+
+    .ace_editor .ace_fold-widget:hover {
+        color: var(--yellow) !important;
+    }
+    
+    .ace_editor .ace_indent-guide {
+        background: linear-gradient(to right, 
+            var(--bg2) 0%, 
+            var(--bg2) 50%, 
+            transparent 50%, 
+            transparent 100%) !important;
+        background-size: 2px 100% !important;
+        background-repeat: no-repeat !important;
+        opacity: 0.4 !important;
+    }
+
+    /* Optional: Styling for the editor margin (for error markers, etc.) */
+    .ace_editor .ace_marker-layer .ace_error-marker {
+        background-color: rgba(204, 36, 29, 0.5) !important;
+    }
+
+    .ace_editor .ace_marker-layer .ace_warning-marker {
+        background-color: rgba(215, 153, 33, 0.5) !important;
+    }
+    
+    .welldone
+    .verdict-accepted
+    .cell-passed-system-test
+    .cell-accepted
+    {
+        color: var(--green) !important;
+    }
+    
+    .verdict-challenged
+    .verdict-rejected
+    .cell-rejected {
+        color: var(--red) !important;
+    } 
+    
+    .verdict-unsuccessful-challenge {
+        color: var(--gray) !important;
+    }
+    
+    .cell-time{
+        color: var(--gray) !important;
+    }
+    
+    #facebox .close
+    #facebox .content {
+      background: var(--bg) !important;
+    }
+    
+    #facebox .close_image{
+        filter: invert(var(--invert-value));
+    }
+    
+    #facebox pre {
+      background: var(--bg0) !important;
+    }
+    
+    #program-source-text-copy {
+        color: var(--blue) !important;
+    }
+    
+    .input-view .text
+    .output-view .text
+    .checker-comment-view .text
+    #facebox .input
+    #facebox .output 
+    #facebox .checker
+    {
+      background: var(--bg1) !important;
+    }
+    
+    /* Syntax highlighting (generic - will style most common tokens) */
+    .kwd {
+        color: var(--purple) !important;
+    }
+
+    .str {
+        color: var(--green) !important;
+    }
+
+    .com {
+        color: var(--gray) !important;
+        font-style: italic !important;
+    }
+
+    .pln {
+        color: var(--fg1) !important;
+    }
+
+    .pun {
+        color: var(--fg3) !important;
+    }
+
+    .typ {
+        color: var(--aqua) !important;
+    }
+
+    .lit {
+        color: var(--orange) !important;
+    }
+
+    .diffHtmlTarget del {
+        background: #cc241d77 !important;
+    }
+    
+    .diffHtmlTarget ins {
+        background: #98971a77 !important;
+    }
+}
+
