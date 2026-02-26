@@ -1,19 +1,34 @@
 /* ==UserStyle==
-@name         Gruvbox for Codeforces
+@name         Codeforces Theme Pack
 @namespace    https://codeforces.com/*
-@homepageURL  https://github.com/ahmed-essam-dev/gruvbox4codeforces/
-@updateURL    https://raw.githubusercontent.com/ahmed-essam-dev/gruvbox4codeforces/refs/heads/main/stylus.user.css
+@homepageURL  https://github.com/ahmed-essam-dev/themes4codeforces/
+@updateURL    https://raw.githubusercontent.com/ahmed-essam-dev/themes4codeforces/refs/heads/main/stylus.user.css
 @version      0.0.1
-@description  Gruvbox theme for Codeforces with light/dark and soft/hard variants
+@description  Multiple themes for Codeforces (Gruvbox, Solarized, Dracula, Nord, etc.)
 @author       ahmed-essam-dev
 @license      MIT
 
 @preprocessor stylus
-@var select theme "Theme Variant" [
-    "darkHard:Dark (Hard)*",
-    "darkSoft:Dark (Soft)", 
-    "lightHard:Light (Hard)",
-    "lightSoft:Light (Soft)",
+@var select theme "Color Scheme" [
+    "gruvboxDarkHard:Gruvbox Dark (Hard)*",
+    "gruvboxDarkSoft:Gruvbox Dark (Soft)", 
+    "gruvboxLightHard:Gruvbox Light (Hard)",
+    "gruvboxLightSoft:Gruvbox Light (Soft)",
+    "solarizedDark:Solarized Dark",
+    "solarizedLight:Solarized Light",
+    "dracula:Dracula",
+    "nord:Nord",
+    "oneDark:One Dark",
+    "catppuccinMocha:Catppuccin Mocha",
+    "tokyoNight:Tokyo Night",
+    "monokaiPro:Monokai Pro",
+    "ayuDark:Ayu Dark",
+    "ayuLight:Ayu Light",
+    "githubDark:GitHub Dark",
+    "githubLight:GitHub Light",
+    "everforestDark:Everforest Dark",
+    "rosePine:Rose Pine",
+    "kanagawa:Kanagawa"
 ]
 ==/UserStyle== */
 
@@ -25,148 +40,575 @@
     */
 
     /* Dark Hard palette (default Gruvbox) */
-    if theme == "darkHard" {
+    if theme == "gruvboxDarkHard" {
         :root {
-            /* Background colors - dark to light */
-            --bg: #1d2021;     /* Main background */
-            --bg0_h: #1d2021;  /* Darkest background */
-            --bg0: #282828;    /* Base background */
-            --bg1: #3c3836;    /* Slightly lighter background */
-            --bg2: #504945;    /* Even lighter background */
-            --bg3: #665c54;    /* Highlight background */
-            --bg4: #7c6f64;    /* Lightest background */
+            --bg: rgba(29, 32, 33, 1);      /* #1d2021 */
+            --bg0_h: rgba(29, 32, 33, 1);   /* #1d2021 */
+            --bg0: rgba(40, 40, 40, 1);     /* #282828 */
+            --bg1: rgba(60, 56, 54, 1);     /* #3c3836 */
+            --bg2: rgba(80, 73, 69, 1);     /* #504945 */
+            --bg3: rgba(102, 92, 84, 1);    /* #665c54 */
+            --bg4: rgba(124, 111, 100, 1);  /* #7c6f64 */
 
-            /* Foreground colors - light to dark */
-            --fg: #fbf1c7;     /* Main foreground */
-            --fg0: #fbf1c7;    /* Brightest text */
-            --fg1: #ebdbb2;    /* Primary text */
-            --fg2: #d5c4a1;    /* Secondary text */
-            --fg3: #bdae93;    /* Tertiary text */
-            --fg4: #a89984;    /* Quaternary text */
+            --fg: rgba(251, 241, 199, 1);   /* #fbf1c7 */
+            --fg0: rgba(251, 241, 199, 1);  /* #fbf1c7 */
+            --fg1: rgba(235, 219, 178, 1);  /* #ebdbb2 */
+            --fg2: rgba(213, 196, 161, 1);  /* #d5c4a1 */
+            --fg3: rgba(189, 174, 147, 1);  /* #bdae93 */
+            --fg4: rgba(168, 152, 132, 1);  /* #a89984 */
 
-            /* Accent colors */
-            --red: #cc241d;    /* Error, rejection */
-            --green: #98971a;  /* Success, acceptance */
-            --yellow: #d79921; /* Warning, highlight */
-            --blue: #458588;   /* Links, information */
-            --purple: #b16286; /* Special elements */
-            --aqua: #689d6a;   /* Alternate links */
-            --orange: #d65d0e; /* Important notices */
-            --gray: #928374;   /* Disabled elements */
+            --red: rgba(204, 36, 29, 1);    /* #cc241d */
+            --green: rgba(152, 151, 26, 1); /* #98971a */
+            --yellow: rgba(215, 153, 33, 1);/* #d79921 */
+            --blue: rgba(69, 133, 136, 1);  /* #458588 */
+            --purple: rgba(177, 98, 134, 1);/* #b16286 */
+            --aqua: rgba(104, 157, 106, 1); /* #689d6a */
+            --orange: rgba(214, 93, 14, 1); /* #d65d0e */
+            --gray: rgba(146, 131, 116, 1); /* #928374 */
 
-            /* used with images to invert its colors */
-            --invert-value: 0.84
-            --hue-rotate-value: 0deg
-
+            --invert-value: 0.84;
+            --hue-rotate-value: 0deg;
         }
     }
     
     /* Dark Soft palette */
-    if theme == "darkSoft" {
+    if theme == "gruvboxDarkSoft" {
         :root {
-            /* Background colors - dark to light */
-            --bg: #32302f;     /* Main background */
-            --bg0_h: #32302f;  /* Darkest background */
-            --bg0: #3c3836;    /* Base background */
-            --bg1: #504945;    /* Slightly lighter background */
-            --bg2: #665c54;    /* Even lighter background */
-            --bg3: #7c6f64;    /* Highlight background */
-            --bg4: #928374;    /* Lightest background */
+            --bg: rgba(50, 48, 47, 1);      /* #32302f */
+            --bg0_h: rgba(50, 48, 47, 1);   /* #32302f */
+            --bg0: rgba(60, 56, 54, 1);     /* #3c3836 */
+            --bg1: rgba(80, 73, 69, 1);     /* #504945 */
+            --bg2: rgba(102, 92, 84, 1);    /* #665c54 */
+            --bg3: rgba(124, 111, 100, 1);  /* #7c6f64 */
+            --bg4: rgba(146, 131, 116, 1);  /* #928374 */
 
-            /* Foreground colors - light to dark */
-            --fg: #fbf1c7;     /* Main foreground */
-            --fg0: #fbf1c7;    /* Brightest text */
-            --fg1: #ebdbb2;    /* Primary text */
-            --fg2: #d5c4a1;    /* Secondary text */
-            --fg3: #bdae93;    /* Tertiary text */
-            --fg4: #a89984;    /* Quaternary text */
+            --fg: rgba(251, 241, 199, 1);   /* #fbf1c7 */
+            --fg0: rgba(251, 241, 199, 1);  /* #fbf1c7 */
+            --fg1: rgba(235, 219, 178, 1);  /* #ebdbb2 */
+            --fg2: rgba(213, 196, 161, 1);  /* #d5c4a1 */
+            --fg3: rgba(189, 174, 147, 1);  /* #bdae93 */
+            --fg4: rgba(168, 152, 132, 1);  /* #a89984 */
 
-            /* Accent colors */
-            --red: #cc241d;
-            --green: #98971a;
-            --yellow: #d79921;
-            --blue: #458588;
-            --purple: #b16286;
-            --aqua: #689d6a;
-            --orange: #d65d0e;
-            --gray: #928374;
+            --red: rgba(204, 36, 29, 1);    /* #cc241d */
+            --green: rgba(152, 151, 26, 1); /* #98971a */
+            --yellow: rgba(215, 153, 33, 1);/* #d79921 */
+            --blue: rgba(69, 133, 136, 1);  /* #458588 */
+            --purple: rgba(177, 98, 134, 1);/* #b16286 */
+            --aqua: rgba(104, 157, 106, 1); /* #689d6a */
+            --orange: rgba(214, 93, 14, 1); /* #d65d0e */
+            --gray: rgba(146, 131, 116, 1); /* #928374 */
 
-            --invert-value: 0.84
-            --hue-rotate-value: 180deg
-
-
+            --invert-value: 0.84;
+            --hue-rotate-value: 180deg;
         }
     }
     
     /* Light Hard palette */
-    if theme == "lightHard" {
+    if theme == "gruvboxLightHard" {
         :root {
-            /* Background colors - light to dark */
-            --bg: #fbf1c7;     /* Main background */
-            --bg0_h: #f9f5d7;  /* Lightest background */
-            --bg0: #fbf1c7;    /* Base background */
-            --bg1: #ebdbb2;    /* Slightly darker background */
-            --bg2: #d5c4a1;    /* Even darker background */
-            --bg3: #bdae93;    /* Highlight background */
-            --bg4: #a89984;    /* Darkest background */
+            --bg: rgba(251, 241, 199, 1);   /* #fbf1c7 */
+            --bg0_h: rgba(249, 245, 215, 1);/* #f9f5d7 */
+            --bg0: rgba(251, 241, 199, 1);  /* #fbf1c7 */
+            --bg1: rgba(235, 219, 178, 1);  /* #ebdbb2 */
+            --bg2: rgba(213, 196, 161, 1);  /* #d5c4a1 */
+            --bg3: rgba(189, 174, 147, 1);  /* #bdae93 */
+            --bg4: rgba(168, 152, 132, 1);  /* #a89984 */
 
-            /* Foreground colors - dark to light */
-            --fg: #3c3836;     /* Main foreground */
-            --fg0: #282828;    /* Darkest text */
-            --fg1: #3c3836;    /* Primary text */
-            --fg2: #504945;    /* Secondary text */
-            --fg3: #665c54;    /* Tertiary text */
-            --fg4: #7c6f64;    /* Quaternary text */
+            --fg: rgba(60, 56, 54, 1);      /* #3c3836 */
+            --fg0: rgba(40, 40, 40, 1);     /* #282828 */
+            --fg1: rgba(60, 56, 54, 1);     /* #3c3836 */
+            --fg2: rgba(80, 73, 69, 1);     /* #504945 */
+            --fg3: rgba(102, 92, 84, 1);    /* #665c54 */
+            --fg4: rgba(124, 111, 100, 1);  /* #7c6f64 */
 
-            /* Accent colors */
-            --red: #cc241d;
-            --green: #98971a;
-            --yellow: #d79921;
-            --blue: #458588;
-            --purple: #b16286;
-            --aqua: #689d6a;
-            --orange: #d65d0e;
-            --gray: #928374;
+            --red: rgba(204, 36, 29, 1);    /* #cc241d */
+            --green: rgba(152, 151, 26, 1); /* #98971a */
+            --yellow: rgba(215, 153, 33, 1);/* #d79921 */
+            --blue: rgba(69, 133, 136, 1);  /* #458588 */
+            --purple: rgba(177, 98, 134, 1);/* #b16286 */
+            --aqua: rgba(104, 157, 106, 1); /* #689d6a */
+            --orange: rgba(214, 93, 14, 1); /* #d65d0e */
+            --gray: rgba(146, 131, 116, 1); /* #928374 */
 
-            --invert-value: 0.1
-            --hue-rotate-value: 0deg
-
-
+            --invert-value: 0.1;
+            --hue-rotate-value: 0deg;
         }
     }
     
     /* Light Soft palette */
-    if theme == "lightSoft" {
+    if theme == "gruvboxLightSoft" {
         :root {
-            /* Background colors - light to dark */
-            --bg: #f2e5bc;     /* Main background */
-            --bg0_h: #f2e5bc;  /* Lightest background */
-            --bg0: #f2e5bc;    /* Base background */
-            --bg1: #ebdbb2;    /* Slightly darker background */
-            --bg2: #d5c4a1;    /* Even darker background */
-            --bg3: #bdae93;    /* Highlight background */
-            --bg4: #a89984;    /* Darkest background */
+            --bg: rgba(242, 229, 188, 1);   /* #f2e5bc */
+            --bg0_h: rgba(242, 229, 188, 1);/* #f2e5bc */
+            --bg0: rgba(242, 229, 188, 1);  /* #f2e5bc */
+            --bg1: rgba(235, 219, 178, 1);  /* #ebdbb2 */
+            --bg2: rgba(213, 196, 161, 1);  /* #d5c4a1 */
+            --bg3: rgba(189, 174, 147, 1);  /* #bdae93 */
+            --bg4: rgba(168, 152, 132, 1);  /* #a89984 */
 
-            /* Foreground colors - dark to light */
-            --fg: #3c3836;     /* Main foreground */
-            --fg0: #282828;    /* Darkest text */
-            --fg1: #3c3836;    /* Primary text */
-            --fg2: #504945;    /* Secondary text */
-            --fg3: #665c54;    /* Tertiary text */
-            --fg4: #7c6f64;    /* Quaternary text */
+            --fg: rgba(60, 56, 54, 1);      /* #3c3836 */
+            --fg0: rgba(40, 40, 40, 1);     /* #282828 */
+            --fg1: rgba(60, 56, 54, 1);     /* #3c3836 */
+            --fg2: rgba(80, 73, 69, 1);     /* #504945 */
+            --fg3: rgba(102, 92, 84, 1);    /* #665c54 */
+            --fg4: rgba(124, 111, 100, 1);  /* #7c6f64 */
 
-            /* Accent colors */
-            --red: #cc241d;
-            --green: #98971a;
-            --yellow: #d79921;
-            --blue: #458588;
-            --purple: #b16286;
-            --aqua: #689d6a;
-            --orange: #d65d0e;
-            --gray: #928374;
+            --red: rgba(204, 36, 29, 1);    /* #cc241d */
+            --green: rgba(152, 151, 26, 1); /* #98971a */
+            --yellow: rgba(215, 153, 33, 1);/* #d79921 */
+            --blue: rgba(69, 133, 136, 1);  /* #458588 */
+            --purple: rgba(177, 98, 134, 1);/* #b16286 */
+            --aqua: rgba(104, 157, 106, 1); /* #689d6a */
+            --orange: rgba(214, 93, 14, 1); /* #d65d0e */
+            --gray: rgba(146, 131, 116, 1); /* #928374 */
 
-            --invert-value: 0.1
-            --hue-rotate-value: 0deg
+            --invert-value: 0.1;
+            --hue-rotate-value: 0deg;
+        }
+    }
+    
+    /* Solarized Dark */
+    if theme == "solarizedDark" {
+        :root {
+            --bg: rgba(0, 43, 54, 1);       /* #002b36 */
+            --bg0_h: rgba(7, 54, 66, 1);    /* #073642 */
+            --bg0: rgba(7, 54, 66, 1);      /* #073642 */
+            --bg1: rgba(24, 75, 85, 1);     /* #184b55 */
+            --bg2: rgba(41, 91, 102, 1);    /* #295b66 */
+            --bg3: rgba(58, 108, 119, 1);   /* #3a6c77 */
+            --bg4: rgba(75, 124, 136, 1);   /* #4b7c88 */
+            --fg: rgba(131, 148, 150, 1);   /* #839496 */
+            --fg0: rgba(253, 246, 227, 1);  /* #fdf6e3 */
+            --fg1: rgba(238, 232, 213, 1);  /* #eee8d5 */
+            --fg2: rgba(147, 161, 161, 1);  /* #93a1a1 */
+            --fg3: rgba(131, 148, 150, 1);  /* #839496 */
+            --fg4: rgba(101, 123, 131, 1);  /* #657b83 */
+            --red: rgba(220, 50, 47, 1);    /* #dc322f */
+            --green: rgba(133, 153, 0, 1);  /* #859900 */
+            --yellow: rgba(181, 137, 0, 1); /* #b58900 */
+            --blue: rgba(38, 139, 210, 1);  /* #268bd2 */
+            --purple: rgba(211, 54, 130, 1);/* #d33682 */
+            --aqua: rgba(42, 161, 152, 1);  /* #2aa198 */
+            --orange: rgba(203, 75, 22, 1); /* #cb4b16 */
+            --gray: rgba(88, 110, 117, 1);  /* #586e75 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Solarized Light */
+    if theme == "solarizedLight" {
+        :root {
+            --bg: rgba(253, 246, 227, 1);   /* #fdf6e3 */
+            --bg0_h: rgba(238, 232, 213, 1);/* #eee8d5 */
+            --bg0: rgba(238, 232, 213, 1);  /* #eee8d5 */
+            --bg1: rgba(221, 214, 193, 1);  /* #ddd6c1 */
+            --bg2: rgba(204, 197, 173, 1);  /* #ccc5ad */
+            --bg3: rgba(187, 180, 154, 1);  /* #bbb49a */
+            --bg4: rgba(170, 163, 134, 1);  /* #aaa386 */
+            --fg: rgba(101, 123, 131, 1);   /* #657b83 */
+            --fg0: rgba(0, 43, 54, 1);      /* #002b36 */
+            --fg1: rgba(7, 54, 66, 1);      /* #073642 */
+            --fg2: rgba(88, 110, 117, 1);   /* #586e75 */
+            --fg3: rgba(101, 123, 131, 1);  /* #657b83 */
+            --fg4: rgba(131, 148, 150, 1);  /* #839496 */
+            --red: rgba(220, 50, 47, 1);    /* #dc322f */
+            --green: rgba(133, 153, 0, 1);  /* #859900 */
+            --yellow: rgba(181, 137, 0, 1); /* #b58900 */
+            --blue: rgba(38, 139, 210, 1);  /* #268bd2 */
+            --purple: rgba(211, 54, 130, 1);/* #d33682 */
+            --aqua: rgba(42, 161, 152, 1);  /* #2aa198 */
+            --orange: rgba(203, 75, 22, 1); /* #cb4b16 */
+            --gray: rgba(147, 161, 161, 1); /* #93a1a1 */
+            --invert-value: 0;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Dracula */
+    if theme == "dracula" {
+        :root {
+            --bg: rgba(40, 42, 54, 1);      /* #282a36 */
+            --bg0_h: rgba(28, 29, 38, 1);   /* #1c1d26 */
+            --bg0: rgba(40, 42, 54, 1);     /* #282a36 */
+            --bg1: rgba(52, 55, 70, 1);     /* #343746 */
+            --bg2: rgba(64, 67, 83, 1);     /* #404353 */
+            --bg3: rgba(77, 79, 96, 1);     /* #4d4f60 */
+            --bg4: rgba(90, 92, 110, 1);    /* #5a5c6e */
+            --fg: rgba(248, 248, 242, 1);   /* #f8f8f2 */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(248, 248, 242, 1);  /* #f8f8f2 */
+            --fg2: rgba(233, 233, 226, 1);  /* #e9e9e2 */
+            --fg3: rgba(191, 191, 191, 1);  /* #bfbfbf */
+            --fg4: rgba(166, 166, 166, 1);  /* #a6a6a6 */
+            --red: rgba(255, 85, 85, 1);    /* #ff5555 */
+            --green: rgba(80, 250, 123, 1); /* #50fa7b */
+            --yellow: rgba(241, 250, 140, 1);/* #f1fa8c */
+            --blue: rgba(139, 233, 253, 1); /* #8be9fd */
+            --purple: rgba(189, 147, 249, 1);/* #bd93f9 */
+            --aqua: rgba(139, 233, 253, 1); /* #8be9fd (cyan) */
+            --orange: rgba(255, 184, 108, 1);/* #ffb86c */
+            --gray: rgba(98, 114, 164, 1);  /* #6272a4 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+    
+    /* Nord */
+    if theme == "nord" {
+        :root {
+            --bg: rgba(46, 52, 64, 1);      /* #2e3440 */
+            --bg0_h: rgba(36, 41, 51, 1);   /* #242933 */
+            --bg0: rgba(46, 52, 64, 1);     /* #2e3440 */
+            --bg1: rgba(59, 66, 82, 1);     /* #3b4252 */
+            --bg2: rgba(67, 76, 94, 1);     /* #434c5e */
+            --bg3: rgba(76, 86, 106, 1);    /* #4c566a */
+            --bg4: rgba(94, 106, 129, 1);   /* #5e6a81 */
+            --fg: rgba(216, 222, 233, 1);   /* #d8dee9 */
+            --fg0: rgba(236, 239, 244, 1);  /* #eceff4 */
+            --fg1: rgba(229, 233, 240, 1);  /* #e5e9f0 */
+            --fg2: rgba(216, 222, 233, 1);  /* #d8dee9 */
+            --fg3: rgba(182, 191, 207, 1);  /* #b6bfcf */
+            --fg4: rgba(163, 173, 194, 1);  /* #a3adc2 */
+            --red: rgba(191, 97, 106, 1);   /* #bf616a */
+            --green: rgba(163, 190, 140, 1);/* #a3be8c */
+            --yellow: rgba(235, 203, 139, 1);/* #ebcb8b */
+            --blue: rgba(129, 161, 193, 1); /* #81a1c1 */
+            --purple: rgba(180, 142, 173, 1);/* #b48ead */
+            --aqua: rgba(136, 192, 208, 1); /* #88c0d0 */
+            --orange: rgba(208, 135, 112, 1);/* #d08770 */
+            --gray: rgba(76, 86, 106, 1);   /* #4c566a */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* One Dark (Atom) */
+    if theme == "oneDark" {
+        :root {
+            --bg: rgba(40, 44, 52, 1);      /* #282c34 */
+            --bg0_h: rgba(33, 37, 43, 1);   /* #21252b */
+            --bg0: rgba(40, 44, 52, 1);     /* #282c34 */
+            --bg1: rgba(47, 52, 61, 1);     /* #2f343d */
+            --bg2: rgba(53, 59, 69, 1);     /* #353b45 */
+            --bg3: rgba(62, 68, 81, 1);     /* #3e4451 */
+            --bg4: rgba(75, 82, 99, 1);     /* #4b5263 */
+            --fg: rgba(171, 178, 191, 1);   /* #abb2bf */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(230, 230, 230, 1);  /* #e6e6e6 */
+            --fg2: rgba(171, 178, 191, 1);  /* #abb2bf */
+            --fg3: rgba(145, 153, 168, 1);  /* #9199a8 */
+            --fg4: rgba(127, 135, 151, 1);  /* #7f8797 */
+            --red: rgba(224, 108, 117, 1);  /* #e06c75 */
+            --green: rgba(152, 195, 121, 1);/* #98c379 */
+            --yellow: rgba(229, 192, 123, 1);/* #e5c07b */
+            --blue: rgba(97, 175, 239, 1);  /* #61afef */
+            --purple: rgba(198, 120, 221, 1);/* #c678dd */
+            --aqua: rgba(86, 182, 194, 1);  /* #56b6c2 */
+            --orange: rgba(209, 154, 102, 1);/* #d19a66 */
+            --gray: rgba(127, 132, 142, 1); /* #7f848e */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Catppuccin Mocha */
+    if theme == "catppuccinMocha" {
+        :root {
+            --bg: rgba(30, 30, 46, 1);      /* #1e1e2e */
+            --bg0_h: rgba(24, 24, 37, 1);   /* #181825 */
+            --bg0: rgba(30, 30, 46, 1);     /* #1e1e2e */
+            --bg1: rgba(48, 45, 65, 1);     /* #302d41 */
+            --bg2: rgba(56, 53, 81, 1);     /* #383551 */
+            --bg3: rgba(65, 72, 104, 1);    /* #414868 */
+            --bg4: rgba(87, 82, 104, 1);    /* #575268 */
+            --fg: rgba(205, 214, 244, 1);   /* #cdd6f4 */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(230, 233, 240, 1);  /* #e6e9f0 */
+            --fg2: rgba(205, 214, 244, 1);  /* #cdd6f4 */
+            --fg3: rgba(186, 194, 222, 1);  /* #bac2de */
+            --fg4: rgba(166, 173, 200, 1);  /* #a6adc8 */
+            --red: rgba(243, 139, 168, 1);  /* #f38ba8 */
+            --green: rgba(166, 227, 161, 1);/* #a6e3a1 */
+            --yellow: rgba(249, 226, 175, 1);/* #f9e2af */
+            --blue: rgba(137, 180, 250, 1); /* #89b4fa */
+            --purple: rgba(203, 166, 247, 1);/* #cba6f7 */
+            --aqua: rgba(148, 226, 213, 1); /* #94e2d5 */
+            --orange: rgba(250, 179, 135, 1);/* #fab387 */
+            --gray: rgba(108, 112, 134, 1); /* #6c7086 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Tokyo Night */
+    if theme == "tokyoNight" {
+        :root {
+            --bg: rgba(26, 27, 38, 1);      /* #1a1b26 */
+            --bg0_h: rgba(22, 22, 30, 1);   /* #16161e */
+            --bg0: rgba(26, 27, 38, 1);     /* #1a1b26 */
+            --bg1: rgba(36, 40, 59, 1);     /* #24283b */
+            --bg2: rgba(42, 47, 68, 1);     /* #2a2f44 */
+            --bg3: rgba(51, 65, 92, 1);     /* #33415c */
+            --bg4: rgba(65, 81, 112, 1);    /* #415170 */
+            --fg: rgba(192, 202, 245, 1);   /* #c0caf5 */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(230, 233, 240, 1);  /* #e6e9f0 */
+            --fg2: rgba(192, 202, 245, 1);  /* #c0caf5 */
+            --fg3: rgba(169, 177, 214, 1);  /* #a9b1d6 */
+            --fg4: rgba(154, 165, 206, 1);  /* #9aa5ce */
+            --red: rgba(247, 118, 142, 1);  /* #f7768e */
+            --green: rgba(158, 206, 106, 1);/* #9ece6a */
+            --yellow: rgba(224, 175, 104, 1);/* #e0af68 */
+            --blue: rgba(122, 162, 247, 1); /* #7aa2f7 */
+            --purple: rgba(187, 154, 247, 1);/* #bb9af7 */
+            --aqua: rgba(42, 195, 222, 1);  /* #2ac3de */
+            --orange: rgba(255, 158, 100, 1);/* #ff9e64 */
+            --gray: rgba(86, 95, 137, 1);   /* #565f89 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Monokai Pro */
+    if theme == "monokaiPro" {
+        :root {
+            --bg: rgba(45, 42, 46, 1);      /* #2d2a2e */
+            --bg0_h: rgba(34, 31, 34, 1);   /* #221f22 */
+            --bg0: rgba(45, 42, 46, 1);     /* #2d2a2e */
+            --bg1: rgba(59, 56, 60, 1);     /* #3b383c */
+            --bg2: rgba(71, 67, 72, 1);     /* #474348 */
+            --bg3: rgba(90, 83, 91, 1);     /* #5a535b */
+            --bg4: rgba(108, 99, 112, 1);   /* #6c6370 */
+            --fg: rgba(252, 252, 250, 1);   /* #fcfcfa */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(252, 252, 250, 1);  /* #fcfcfa */
+            --fg2: rgba(229, 227, 224, 1);  /* #e5e3e0 */
+            --fg3: rgba(205, 202, 197, 1);  /* #cdcac5 */
+            --fg4: rgba(180, 176, 170, 1);  /* #b4b0aa */
+            --red: rgba(255, 97, 136, 1);   /* #ff6188 */
+            --green: rgba(169, 220, 118, 1);/* #a9dc76 */
+            --yellow: rgba(255, 216, 102, 1);/* #ffd866 */
+            --blue: rgba(120, 220, 232, 1); /* #78dce8 */
+            --purple: rgba(171, 157, 242, 1);/* #ab9df2 */
+            --aqua: rgba(120, 220, 232, 1); /* #78dce8 */
+            --orange: rgba(252, 152, 103, 1);/* #fc9867 */
+            --gray: rgba(147, 146, 147, 1); /* #939293 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Ayu Dark */
+    if theme == "ayuDark" {
+        :root {
+            --bg: rgba(10, 14, 20, 1);      /* #0a0e14 */
+            --bg0_h: rgba(0, 0, 0, 1);      /* #000000 */
+            --bg0: rgba(10, 14, 20, 1);     /* #0a0e14 */
+            --bg1: rgba(26, 31, 41, 1);     /* #1a1f29 */
+            --bg2: rgba(35, 41, 51, 1);     /* #232933 */
+            --bg3: rgba(47, 54, 64, 1);     /* #2f3640 */
+            --bg4: rgba(61, 69, 82, 1);     /* #3d4552 */
+            --fg: rgba(179, 177, 173, 1);   /* #b3b1ad */
+            --fg0: rgba(230, 225, 207, 1);  /* #e6e1cf */
+            --fg1: rgba(212, 210, 205, 1);  /* #d4d2cd */
+            --fg2: rgba(179, 177, 173, 1);  /* #b3b1ad */
+            --fg3: rgba(147, 152, 145, 1);  /* #939891 */
+            --fg4: rgba(122, 130, 128, 1);  /* #7a8280 */
+            --red: rgba(255, 51, 51, 1);    /* #ff3333 */
+            --green: rgba(184, 204, 82, 1); /* #b8cc52 */
+            --yellow: rgba(231, 197, 71, 1);/* #e7c547 */
+            --blue: rgba(89, 194, 255, 1);  /* #59c2ff */
+            --purple: rgba(210, 166, 255, 1);/* #d2a6ff */
+            --aqua: rgba(149, 230, 203, 1); /* #95e6cb */
+            --orange: rgba(255, 143, 64, 1);/* #ff8f40 */
+            --gray: rgba(92, 103, 115, 1);  /* #5c6773 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Ayu Light */
+    if theme == "ayuLight" {
+        :root {
+            --bg: rgba(250, 250, 250, 1);   /* #fafafa */
+            --bg0_h: rgba(255, 255, 255, 1);/* #ffffff */
+            --bg0: rgba(252, 252, 252, 1);  /* #fcfcfc */
+            --bg1: rgba(240, 240, 240, 1);  /* #f0f0f0 */
+            --bg2: rgba(230, 230, 230, 1);  /* #e6e6e6 */
+            --bg3: rgba(217, 217, 217, 1);  /* #d9d9d9 */
+            --bg4: rgba(204, 204, 204, 1);  /* #cccccc */
+            --fg: rgba(92, 92, 92, 1);      /* #5c5c5c */
+            --fg0: rgba(38, 38, 38, 1);     /* #262626 */
+            --fg1: rgba(64, 64, 64, 1);     /* #404040 */
+            --fg2: rgba(92, 92, 92, 1);     /* #5c5c5c */
+            --fg3: rgba(122, 122, 122, 1);  /* #7a7a7a */
+            --fg4: rgba(153, 153, 153, 1);  /* #999999 */
+            --red: rgba(245, 24, 24, 1);    /* #f51818 */
+            --green: rgba(134, 179, 0, 1);  /* #86b300 */
+            --yellow: rgba(184, 165, 0, 1); /* #b8a500 */
+            --blue: rgba(32, 159, 181, 1);  /* #209fb5 */
+            --purple: rgba(163, 122, 204, 1);/* #a37acc */
+            --aqua: rgba(32, 159, 181, 1);  /* #209fb5 */
+            --orange: rgba(245, 125, 38, 1);/* #f57d26 */
+            --gray: rgba(138, 138, 138, 1); /* #8a8a8a */
+            --invert-value: 0;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* ========== NEW THEMES ========== */
+
+    /* GitHub Dark */
+    if theme == "githubDark" {
+        :root {
+            --bg: rgba(13, 17, 23, 1);      /* #0d1117 */
+            --bg0_h: rgba(1, 4, 9, 1);      /* #010409 */
+            --bg0: rgba(13, 17, 23, 1);     /* #0d1117 */
+            --bg1: rgba(22, 27, 34, 1);     /* #161b22 */
+            --bg2: rgba(31, 36, 44, 1);     /* #1f242c */
+            --bg3: rgba(48, 54, 61, 1);     /* #30363d */
+            --bg4: rgba(110, 118, 129, 1);  /* #6e7681 */
+            --fg: rgba(201, 209, 217, 1);   /* #c9d1d9 */
+            --fg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --fg1: rgba(240, 246, 252, 1);  /* #f0f6fc */
+            --fg2: rgba(201, 209, 217, 1);  /* #c9d1d9 */
+            --fg3: rgba(139, 148, 158, 1);  /* #8b949e */
+            --fg4: rgba(110, 118, 129, 1);  /* #6e7681 */
+            --red: rgba(248, 81, 73, 1);    /* #f85149 */
+            --green: rgba(63, 185, 80, 1);  /* #3fb950 */
+            --yellow: rgba(210, 153, 34, 1);/* #d29922 */
+            --blue: rgba(88, 166, 255, 1);  /* #58a6ff */
+            --purple: rgba(191, 143, 247, 1);/* #bf8ff7 */
+            --aqua: rgba(121, 192, 255, 1); /* #79c0ff */
+            --orange: rgba(255, 166, 87, 1);/* #ffa657 */
+            --gray: rgba(110, 118, 129, 1); /* #6e7681 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* GitHub Light */
+    if theme == "githubLight" {
+        :root {
+            --bg: rgba(255, 255, 255, 1);   /* #ffffff */
+            --bg0_h: rgba(246, 248, 250, 1);/* #f6f8fa */
+            --bg0: rgba(255, 255, 255, 1);  /* #ffffff */
+            --bg1: rgba(246, 248, 250, 1);  /* #f6f8fa */
+            --bg2: rgba(240, 244, 248, 1);  /* #f0f4f8 */
+            --bg3: rgba(209, 217, 224, 1);  /* #d1d9e0 */
+            --bg4: rgba(140, 148, 158, 1);  /* #8c949e */
+            --fg: rgba(31, 35, 40, 1);      /* #1f2328 */
+            --fg0: rgba(9, 14, 18, 1);      /* #090e12 */
+            --fg1: rgba(31, 35, 40, 1);     /* #1f2328 */
+            --fg2: rgba(89, 99, 110, 1);    /* #59636e */
+            --fg3: rgba(110, 118, 129, 1);  /* #6e7681 */
+            --fg4: rgba(140, 148, 158, 1);  /* #8c949e */
+            --red: rgba(208, 60, 58, 1);    /* #d03c3a */
+            --green: rgba(36, 146, 67, 1);  /* #249243 */
+            --yellow: rgba(154, 103, 0, 1); /* #9a6700 */
+            --blue: rgba(9, 105, 218, 1);   /* #0969da */
+            --purple: rgba(130, 80, 223, 1);/* #8250df */
+            --aqua: rgba(9, 105, 218, 1);   /* #0969da */
+            --orange: rgba(188, 92, 0, 1);  /* #bc5c00 */
+            --gray: rgba(89, 99, 110, 1);   /* #59636e */
+            --invert-value: 0;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Everforest Dark */
+    if theme == "everforestDark" {
+        :root {
+            --bg: rgba(45, 53, 52, 1);      /* #2d3534 */
+            --bg0_h: rgba(39, 47, 46, 1);   /* #272f2e */
+            --bg0: rgba(45, 53, 52, 1);     /* #2d3534 */
+            --bg1: rgba(52, 61, 59, 1);     /* #343d3b */
+            --bg2: rgba(61, 71, 68, 1);     /* #3d4744 */
+            --bg3: rgba(71, 82, 78, 1);     /* #47524e */
+            --bg4: rgba(83, 94, 90, 1);     /* #535e5a */
+            --fg: rgba(211, 198, 170, 1);   /* #d3c6aa */
+            --fg0: rgba(221, 209, 184, 1);  /* #ddd1b8 */
+            --fg1: rgba(211, 198, 170, 1);  /* #d3c6aa */
+            --fg2: rgba(189, 174, 147, 1);  /* #bdae93 */
+            --fg3: rgba(167, 151, 125, 1);  /* #a77f5d? wait, correct? Actually Everforest fg3 is #a79a7f? Let's use #a79a7f */
+            --fg3: rgba(167, 154, 127, 1);  /* #a79a7f */
+            --fg4: rgba(139, 128, 106, 1);  /* #8b806a */
+            --red: rgba(230, 126, 128, 1);  /* #e67e80 */
+            --green: rgba(167, 192, 128, 1);/* #a7c080 */
+            --yellow: rgba(219, 188, 126, 1);/* #dbbc7e */
+            --blue: rgba(131, 165, 152, 1); /* #83a598? Actually Everforest blue is #7fbbb3? Wait, I'll use #7fbbb3 */
+            --blue: rgba(127, 187, 179, 1); /* #7fbbb3 */
+            --purple: rgba(210, 146, 162, 1);/* #d292a2? Actually Everforest purple is #d39bb6? Let's use #d39bb6 */
+            --purple: rgba(211, 155, 182, 1);/* #d39bb6 */
+            --aqua: rgba(131, 192, 174, 1); /* #83c0ae */
+            --orange: rgba(230, 162, 120, 1);/* #e6a27a? Actually #e69875? I'll use #e69875 */
+            --orange: rgba(230, 152, 117, 1);/* #e69875 */
+            --gray: rgba(128, 128, 124, 1); /* #80807c */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Rose Pine */
+    if theme == "rosePine" {
+        :root {
+            --bg: rgba(25, 23, 36, 1);      /* #191724 */
+            --bg0_h: rgba(16, 15, 25, 1);   /* #100f19 */
+            --bg0: rgba(25, 23, 36, 1);     /* #191724 */
+            --bg1: rgba(31, 29, 46, 1);     /* #1f1d2e */
+            --bg2: rgba(38, 35, 58, 1);     /* #26233a */
+            --bg3: rgba(44, 41, 70, 1);     /* #2c2946 */
+            --bg4: rgba(57, 52, 82, 1);     /* #393452 */
+            --fg: rgba(224, 222, 244, 1);   /* #e0def4 */
+            --fg0: rgba(245, 243, 255, 1);  /* #f5f3ff */
+            --fg1: rgba(224, 222, 244, 1);  /* #e0def4 */
+            --fg2: rgba(196, 189, 226, 1);  /* #c4bde2 */
+            --fg3: rgba(168, 158, 207, 1);  /* #a89ecf */
+            --fg4: rgba(144, 133, 170, 1);  /* #9085aa */
+            --red: rgba(235, 111, 146, 1);  /* #eb6f92 */
+            --green: rgba(62, 143, 176, 1); /* #3e8fb0? Actually rose pine pine is #31748f, but we map green to #31748f? Let's assign pine to green */
+            --green: rgba(49, 116, 143, 1); /* #31748f (pine) */
+            --yellow: rgba(246, 193, 119, 1);/* #f6c177 */
+            --blue: rgba(156, 207, 216, 1); /* #9ccfd8 (foam) */
+            --purple: rgba(196, 167, 231, 1);/* #c4a7e7 (iris) */
+            --aqua: rgba(156, 207, 216, 1); /* #9ccfd8 (foam) */
+            --orange: rgba(235, 188, 137, 1);/* #ebbc8b (rose) */
+            --gray: rgba(110, 106, 134, 1); /* #6e6a86 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
+        }
+    }
+
+    /* Kanagawa */
+    if theme == "kanagawa" {
+        :root {
+            --bg: rgba(31, 31, 38, 1);      /* #1f1f26 */
+            --bg0_h: rgba(22, 22, 29, 1);   /* #16161d */
+            --bg0: rgba(31, 31, 38, 1);     /* #1f1f26 */
+            --bg1: rgba(38, 38, 46, 1);     /* #26262e */
+            --bg2: rgba(45, 45, 54, 1);     /* #2d2d36 */
+            --bg3: rgba(52, 52, 62, 1);     /* #34343e */
+            --bg4: rgba(69, 69, 79, 1);     /* #45454f */
+            --fg: rgba(220, 215, 202, 1);   /* #dcd7ba */
+            --fg0: rgba(236, 231, 218, 1);  /* #ece7da */
+            --fg1: rgba(220, 215, 202, 1);  /* #dcd7ba */
+            --fg2: rgba(200, 192, 175, 1);  /* #c8c0af */
+            --fg3: rgba(176, 165, 147, 1);  /* #b0a593 */
+            --fg4: rgba(138, 128, 114, 1);  /* #8a8072 */
+            --red: rgba(255, 93, 109, 1);   /* #ff5d6d */
+            --green: rgba(152, 180, 127, 1);/* #98b47f? Actually wave is #7fb4ca? Wait, kanagawa green is #7fb4ca? No, that's blue. Let's use #7fb4ca for blue? I'll define properly */
+            --green: rgba(122, 162, 114, 1);/* #7aa272? Actually autumn green #7aa272? Let's use #7aa272 */
+            --green: rgba(122, 162, 114, 1);/* #7aa272 (autumn green) */
+            --yellow: rgba(224, 175, 104, 1);/* #e0af68 */
+            --blue: rgba(127, 180, 202, 1); /* #7fb4ca (wave) */
+            --purple: rgba(179, 141, 173, 1);/* #b38dad? Actually #957fb8? Let's use #957fb8 */
+            --purple: rgba(149, 127, 184, 1);/* #957fb8 (oni violet) */
+            --aqua: rgba(127, 180, 202, 1); /* #7fb4ca (wave) */
+            --orange: rgba(255, 158, 100, 1);/* #ff9e64 */
+            --gray: rgba(110, 110, 120, 1); /* #6e6e78 */
+            --invert-value: 0.85;
+            --hue-rotate-value: 0deg;
         }
     }
     
@@ -647,17 +1089,17 @@
     }
 
     #userActivityGraph svg rect[fill="#91DA9E"] {
-        fill: #98971a44 !important;
+        fill: unquote("color-mix(in srgb, var(--green), transparent 75%)") !important;
         stroke: var(--bg0) !important;
     }
 
     #userActivityGraph svg rect[fill="#40C463"] {
-        fill: #98971a77 !important;
+        fill: unquote("color-mix(in srgb, var(--green), transparent 50%)") !important;
         stroke: var(--bg0) !important;
     }
 
     #userActivityGraph svg rect[fill="#30A14E"] {
-        fill: #98971abb !important;
+        fill: unquote("color-mix(in srgb, var(--green), transparent 25%)") !important;
         stroke: var(--bg0) !important;
     }
 
@@ -1027,11 +1469,11 @@
 
     /* Optional: Styling for the editor margin (for error markers, etc.) */
     .ace_editor .ace_marker-layer .ace_error-marker {
-        background-color: rgba(204, 36, 29, 0.5) !important;
+        background-color: unquote("color-mix(in srgb, var(--red), transparent 50%)") !important;
     }
 
     .ace_editor .ace_marker-layer .ace_warning-marker {
-        background-color: rgba(215, 153, 33, 0.5) !important;
+        background-color: unquote("color-mix(in srgb, var(--green), transparent 50%)") !important;
     }
     
     .welldone
@@ -1114,11 +1556,28 @@
     }
 
     .diffHtmlTarget del {
-        background: #cc241d77 !important;
+        background-color: unquote("color-mix(in srgb, var(--red), transparent 50%)") !important;
     }
     
     .diffHtmlTarget ins {
-        background: #98971a77 !important;
+        background: unquote("color-mix(in srgb, var(--green), transparent 50%)") !important;
     }
+    
+    div.alert-error {
+        color: var(--red) !important;
+        background-color: unquote("color-mix(in srgb, var(--red), transparent 70%)") !important;
+        border-color: var(--red) !important;
+        text-shadow: none !important;
+    }
+    
+    div.alert-success {
+        color: var(--green) !important;
+        background-color: unquote("color-mix(in srgb, var(--green), transparent 70%)") !important;
+        border-color: var(--green) !important;
+        text-shadow: none !important;
+    }
+    
 }
+
+
 
